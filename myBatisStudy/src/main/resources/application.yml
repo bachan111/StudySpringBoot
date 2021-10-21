@@ -16,3 +16,20 @@ mybatis:
   configuration:
     #默认开启驼峰命名法，可以不用设置该属性
     map-underscore-to-camel-case: true
+
+  log4j:
+    appender:
+      console: org.apache.log4j.ConsoleAppender
+      target: System.out
+      threshold: DEBUG
+      layout: org.apache.log4j.PatternLayout
+        conversion-pattern: [%c]-%m%n
+    logger:
+      org:
+        mybatis: DEBUG
+      java:
+        sql: DEBUG
+         statement: DEBUG
+
+
+
